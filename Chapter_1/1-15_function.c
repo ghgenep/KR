@@ -1,0 +1,25 @@
+
+/* Program prints powers of numbers. */
+
+#include <stdio.h>
+
+int main(void) {
+    int i;
+    
+    for (i = 0; i < 10; ++i)
+        printf("%d %d %d\n", i, power(2, i), power(-3, i));
+
+    return 0;
+}
+
+/* power: take power of a number and return it */
+int power(int base, int n) {
+    int i, p;
+    
+    p = 1;
+    for (i = 1; i <= n; ++i)
+        p = p * base;
+
+    return p;
+}
+
